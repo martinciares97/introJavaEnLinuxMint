@@ -6,6 +6,7 @@
 package guia3;
 
 import java.util.Scanner;
+import static jdk.nashorn.internal.objects.NativeString.toUpperCase;
 
 /**
  *
@@ -19,19 +20,32 @@ public class extra05 {
     public static void main(String[] args) {
         Scanner leer = new Scanner(System.in);
         
+        System.out.println("Ingrese la obra social del socio");
+        String clase = toUpperCase(leer.next());
+        
+        System.out.println("Ingrese el costo del servicio");
+        double costo_real = leer.nextDouble();
+        
+        double descuento = 0;
+        
+        switch(clase) {
+            case "A":
+                descuento = -0.50;
+                break;
+            case "B":
+                descuento = -0.35;
+                break;
+            case "C":
+                System.out.println("Esta clase no tiene descuento");
+                break;
+            
+        }
+        
+        double importe = costo_real + (costo_real * descuento);
+        
+        System.out.println("valor real que represente el costo del tratamiento: "
+                + costo_real + "\n"
+                + "el precio en efectivo con descuento aplicado: " + importe);
     }
     
 }
-/*
-5. Una obra social tiene tres clases de socios:
-○ Los socios tipo ‘A’ abonan una cuota mayor, pero tienen un 50% de
-descuento en todos los tipos de tratamientos.
-○ Los socios tipo ‘B’ abonan una cuota moderada y tienen un 35% de
-descuento para los mismos tratamientos que los socios del tipo A.
-○ Los socios que menos aportan, los de tipo ‘C’, no reciben
-descuentos sobre dichos tratamientos.
-○ Solicite una letra (carácter) que representa la clase de un socio, y
-luego un valor real que represente el costo del tratamiento (previo
-al descuento) y determine el importe en efectivo a pagar por dicho
-socio.
-*/

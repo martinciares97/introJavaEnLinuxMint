@@ -34,6 +34,8 @@ public class extra02 {
         B = C;
         C = aux;
         
+        
+        
         System.out.println("Valores finales: \n" +
 "Variable A: "+ A +"\n" +
 "Variable B: "+ B +"\n" +

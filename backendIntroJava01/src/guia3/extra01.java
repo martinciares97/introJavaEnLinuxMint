@@ -19,14 +19,15 @@ public class extra01 {
     public static void main(String[] args) {
         Scanner leer = new Scanner(System.in);
         
-        System.out.println("Ingrese x cantidad de minutos");
+        System.out.println("Ingrese una cantidad de minutos");
         int min_ingresados = leer.nextInt();
         
         int dias = min_ingresados / 1440;
-        int horas = (min_ingresados - (dias * 1440)) /60;
-        int min = min_ingresados - (horas * 60) - (dias * 1440);
+        int horas = (min_ingresados - (dias * 1440))/60;
         
-        System.out.println(dias + " día/s, "+ horas +" hora/s y "+ min + " minuto/s.");
+        System.out.println("los minutos ingresados son equivalentes a: \n"
+                + dias + " dias, " + horas + " horas" );
+        
     }
 }
 /*
