@@ -18,7 +18,7 @@ public class ejercicio07 {
      */
     public static void main(String[] args) {
         Scanner leer = new Scanner(System.in);
-        String cadena = null;
+        String cadena;
         int contCorrectas = 0;
         int contIncorrectas = 0;
         
